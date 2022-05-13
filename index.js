@@ -1,3 +1,6 @@
+const { phonesToSend } = require('./read-excel')
+console.log('phonesToSend: ', phonesToSend)
+
 const qrcode = require('qrcode-terminal')
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const client = new Client({ authStrategy: new LocalAuth() })
