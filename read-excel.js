@@ -12,9 +12,6 @@ const excelDateToJSDate = date => {
 for (let index = 2; index < 7; index++) {
     // Start with 2 beacause first row are the columns
     // Read the elements by Cell index
-    // const firstName = worksheet[`A${index}`].v
-    // const lastName = worksheet[`B${index}`].v
-    // const date = excelDateToJSDate(worksheet[`C${index}`].v)
     const phone = worksheet[`D${index}`].v
     phonesToSend.push(phone)
 }

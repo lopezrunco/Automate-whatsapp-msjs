@@ -8,18 +8,15 @@ const client = new Client({ authStrategy: new LocalAuth() })
 client.on('qr', (qr) => {
     qrcode.generate(qr, { small: true });
 })
+
 client.on('ready', () => {
     console.log('Client is ready!')
-    client.getChats().then(chats => {
-        const myGroup = chats.find(
-            (chat) => chat.name === 'Wapp automation test'
-        )
-        setTimeout(() => {
-            client.sendMessage(
-                myGroup.id._serialized,
-                'Esto se enviara despues de 20 segundos'
-            )
-        }, 20000)
+    const numbers = []
+    const text = "Esto es un mensaje probando la automatizacion de wapp. Tranqui."
+
+    numbers.map(element => {
+        const chatId = element.substring(1) + "@c.us"
+        client.sendMessage(chatId, text);
     })
 })
 
