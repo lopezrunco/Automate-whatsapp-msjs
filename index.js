@@ -9,7 +9,7 @@ const client = new Client({ authStrategy: new LocalAuth() })
 let phonesToSend = []
 
 // Loop over the records. Start with 2 because first row are the columns. Read the elements by Cell index
-for (let index = 2; index < 7; index++) {
+for (let index = 2; index < 28; index++) {
     const phone = worksheet[`D${index}`].v
     phonesToSend.push(phone)
 }
@@ -23,7 +23,7 @@ client.on('qr', (qr) => {
 client.on('ready', () => {
     console.log('Client is ready!')
     console.log('Sending to the numbers: ', phonesToSend)
-    const text = "This is a automated wapp message"
+    const text = "This is an automated wapp message"
 
     phonesToSend.map(element => {
         const chatId = element + "@c.us"

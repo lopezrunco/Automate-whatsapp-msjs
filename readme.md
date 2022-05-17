@@ -3,7 +3,7 @@ From an Excel file, automate the sending of messages through Whatsapp web.
 
 ### Instructions:
 
-Create your .xlsx file with 5 rows. Example:
+Create your .xlsx file, for example:
 ```bash
 
 | F Name | L Name    | Date       | Phone      |
@@ -26,6 +26,6 @@ Start the app
 ```bash
 npm start
 ```
-Scan the Whatsapp QR
+Scan the Whatsapp QR with your phone
 
 The messages will be sent automatically
