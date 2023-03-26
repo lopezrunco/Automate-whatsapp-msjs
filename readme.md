@@ -91,7 +91,7 @@ This project extract a list of phone numbers from an Excel file, create a QR cod
     ```
 5. Start the app
     ```bash
-    npm start
+    npm run
     ```
 6. Scan the Whatsapp QR on the terminal with your phone.
     The messages will be sent automatically
